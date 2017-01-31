@@ -4,18 +4,19 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/PuerkitoBio/purell"
-	"golang.org/x/net/html"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"strings"
 	"sync"
+
+	"github.com/PuerkitoBio/purell"
+	"golang.org/x/net/html"
 )
 
 var (
-	root          = flag.String("root", "htTp://www.http.net", "Root to crawl")
+	root          = flag.String("root", "http://example.com", "Root to crawl")
 	verbose       = flag.Bool("verbose", true, "verbose")
 	debug         = flag.Bool("debug", false, "debug")
 	externalLinks = flag.Bool("externalLinks", true, "Check external links")
